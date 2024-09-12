@@ -8,7 +8,7 @@ ENV GAME_ARGS=""
 
 COPY root/ /
 
-RUN microdnf install -y --setopt=install_weak_deps=0 xonotic-server-${GAME_VERSION} && \
+RUN microdnf install -y --setopt=install_weak_deps=0 xonotic-server && \
     microdnf clean all && rm -rf /var/cache/dnf
 
 EXPOSE 26000/udp
